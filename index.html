@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Layout first</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="flex-v">
+    <div class="item itemA">
+      <div class="flex-h">
+        <div class="item-h">
+          <div><button class="item-h">Aaa</button></div>
+          <div><button class="item-h">Aab</button></div>
+          <div>Text</div>
+        </div>
+        <div class="item-hr">
+          <button class="item-h">Bba</button>
+          <button class="item-h">Bbb</button>
+        </div>
+      </div>
+    </div>
+    <div class="item itemB">
+
+      <div class="flex-v-e">
+        <div id="b" class="itemA-v-e">
+          b
+        </div>
+        <div class="itemB-v-e">
+
+          <div class="flex-h-e">
+            <div id="ba" class="itemA-h-e">
+              ba
+            </div>
+            <div id="bb" class="itemB-h-e">
+
+              <div class="flex-v-e">
+                <div id="bba" class="flex-h-e">
+                  <div id="bbaa">
+                    <div id="content">content</div>
+                  </div>
+                  <div id="bbab">bbab</div>
+                </div>
+                <div id="bbb">bbb</div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

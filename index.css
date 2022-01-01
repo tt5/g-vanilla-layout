@@ -1,0 +1,116 @@
+html body {
+  margin: 0;
+  border: 0;
+}
+
+.flex-v {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 0.25rem;
+}
+
+.flex-h {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+span {
+  border: solid;
+}
+
+.item-h {
+  background: gray;
+}
+
+.item {
+  background: lightgray;
+}
+
+.itemA {
+  height: 3rem;
+}
+
+.itemB {
+  flex: 1;
+}
+
+.item-h {
+  display: flex;
+  flex-direction: row;
+  gap: 0.125rem;
+}
+
+.item-hr {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.125rem;
+}
+
+.flex-v-e {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.itemA-v-e {
+  height: 3rem;
+}
+
+.itemB-v-e {
+  flex: 1;
+}
+
+.flex-h-e {
+  display: flex;
+  flex-direction: rows;
+  height: 100%;
+}
+
+.itemA-h-e {
+  width: 3rem;
+}
+
+.itemB-h-e {
+}
+
+#b {
+  background: lightcyan;
+}
+
+#ba {
+  background: cyan;
+}
+
+#bb {
+  flex: 1;
+}
+
+#bba {
+  height: 16rem;
+}
+
+#bbb {
+  background: lightgreen;
+  flex: 1;
+}
+
+#bbaa {
+  background: green;
+  width: 16rem;
+}
+
+#bbab {
+  background: blue;
+  flex: 1;
+}
+
+#content {
+  background: brown;
+  height: 8rem;
+  width: 8rem;
+}
