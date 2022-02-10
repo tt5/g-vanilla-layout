@@ -8,52 +8,84 @@
 </head>
 
 <body>
+
+  <template id="t-h">
+    <style>
+.a {
+  display: flex;
+  flex-direction: rows;
+  gap: 0.125rem;
+  height: 100%;
+//  background: blue;
+}
+.b {
+  flex: 1;
+//  background: lightblue;
+}
+    </style>
+    <div class="a">
+      <slot name="a"><div></div></slot>
+      <div class="b"><slot name="b"></slot></div>
+    </div>
+  </template>
+
+  <template id="t-v">
+    <style>
+.a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 100%;
+//  background: green;
+}
+.b {
+  flex: 1;
+//  background: lightgreen;
+}
+    </style>
+    <div class="a">
+      <slot name="a"><div></div></slot>
+      <div class="b"><slot name="b"></slot></div>
+    </div>
+  </template>
+
   <div class="flex-v">
-    <div class="item itemA">
+
+    <div class="itemA">
       <div class="flex-h">
         <div class="item-h">
-          <div><button class="item-h">Aaa</button></div>
-          <div><button class="item-h">Aab</button></div>
-          <div>Text</div>
+          <div><button>Aaa</button></div>
+          <div><button>Aab</button></div>
+          <div class="info">
+            <div></div>
+            <div id="info">Text</div>
+          </div>
         </div>
         <div class="item-hr">
-          <button class="item-h">Bba</button>
-          <button class="item-h">Bbb</button>
+          <button>Bba</button>
+          <button>Bbb</button>
         </div>
       </div>
     </div>
-    <div class="item itemB">
 
-      <div class="flex-v-e">
-        <div id="b" class="itemA-v-e">
-          b
-        </div>
-        <div class="itemB-v-e">
-
-          <div class="flex-h-e">
-            <div id="ba" class="itemA-h-e">
-              ba
-            </div>
-            <div id="bb" class="itemB-h-e">
-
-              <div class="flex-v-e">
-                <div id="bba" class="flex-h-e">
-                  <div id="bbaa">
-                    <div id="content">content</div>
+    <div class="flex-1">
+      <t-v>
+        <div slot="a" class="h-3"></div>
+        <t-h slot="b">
+            <div slot="a" class="w-3"></div>
+            <t-v slot="b">
+                <t-h slot="a" class="h-16">
+                  <div slot="a" class="w-16">
+                    <div id="content"></div>
                   </div>
-                  <div id="bbab">bbab</div>
-                </div>
-                <div id="bbb">bbb</div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
+                </t-h>
+            </t-v>
+        </t-h>
+      </t-v>
     </div>
+
   </div>
+  <script type="module" src="index.js"></script>
 </body>
 
 </html>
